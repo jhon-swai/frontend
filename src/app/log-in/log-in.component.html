@@ -1,0 +1,26 @@
+<form [formGroup]="logInForm">
+
+    <!-- <label for="useremail">
+        Email
+        <input type="email" formControlName="useremail">
+    </label> -->
+
+    <div class="form">
+        <p>
+            <mat-form-field appearance="legacy">
+                <mat-label>Email</mat-label>
+                <input  type="email" matInput formControlName="password">
+            </mat-form-field>
+        </p>
+        <br>
+        <br>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput type="email" formControlName="password">
+            </mat-form-field>
+        </p>
+    </div>
+    
+    
+</form>
