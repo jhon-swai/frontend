@@ -1,26 +1,16 @@
-<form [formGroup]="logInForm">
-
-    <!-- <label for="useremail">
-        Email
-        <input type="email" formControlName="useremail">
-    </label> -->
-
-    <div class="form">
-        <p>
-            <mat-form-field appearance="legacy">
-                <mat-label>Email</mat-label>
-                <input  type="email" matInput formControlName="password">
-            </mat-form-field>
-        </p>
-        <br>
-        <br>
-        <p>
-            <mat-form-field appearance="fill">
-                <mat-label>Password</mat-label>
-                <input matInput type="email" formControlName="password">
-            </mat-form-field>
-        </p>
-    </div>
-    
-    
-</form>
+<!-- main container align items centered vertically -->
+<div class="container" fxLayout="column" fxLayoutAlign="center">
+  <!-- sub-container align items centered horizonatlly -->
+  <div class="inner-container" fxLayout fxLayoutAlign="center">
+    <form [formGroup]="logInForm" class="form" fxLayout="column">
+      <mat-form-field appearance="legacy">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="password">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="email" formControlName="password">
+      </mat-form-field>
+    </form>
+  </div>
+</div>
