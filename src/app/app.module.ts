@@ -8,13 +8,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LogInComponent
+    LogInComponent,
+    NavigationBarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,26 +1,22 @@
-<form [formGroup]="logInForm">
+<form [formGroup]="logInForm" fxFill >
+    <br>
 
-    <!-- <label for="useremail">
-        Email
-        <input type="email" formControlName="useremail">
-    </label> -->
-
-    <div class="form">
-        <p>
+    <div class="formTopSpacing" fxLayout="column" fxFill fxLayoutAlign="start center" >
             <mat-form-field appearance="legacy">
                 <mat-label>Email</mat-label>
-                <input  type="email" matInput formControlName="password">
+                <input color="primary" type="email" matInput formControlName="useremail">
             </mat-form-field>
-        </p>
+        
         <br>
-        <br>
-        <p>
-            <mat-form-field appearance="fill">
+        
+            <mat-form-field  appearance="legacy">
                 <mat-label>Password</mat-label>
                 <input matInput type="email" formControlName="password">
-            </mat-form-field>
-        </p>
-    </div>
-    
-    
+            </mat-form-field> 
+            <div fxLayout="row">
+                <button color="primary"  mat-button>login</button>
+
+                <button color="primary"  mat-button>register</button>
+            </div>
+    </div>  
 </form>
