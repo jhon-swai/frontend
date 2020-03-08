@@ -1,22 +1,26 @@
-<form [formGroup]="logInForm" fxFill >
+<form [formGroup]="loginFormBuilder" (ngSubmit) ="onSubmit()" fxFill >
     <br>
 
     <div class="formTopSpacing" fxLayout="column" fxFill fxLayoutAlign="start center" >
             <mat-form-field appearance="legacy">
                 <mat-label>Email</mat-label>
-                <input color="primary" type="email" matInput formControlName="useremail">
+                <input color="primary" type="email" matInput formControlName="useremail" required email>
             </mat-form-field>
         
         <br>
         
             <mat-form-field  appearance="legacy">
                 <mat-label>Password</mat-label>
-                <input matInput type="email" formControlName="password">
+                <input matInput type="email" formControlName="password" password>
             </mat-form-field> 
             <div fxLayout="row">
-                <button color="primary"  mat-button>login</button>
+                <button type="submit" [disabled]="!loginFormBuilder.valid" color="primary"  mat-button>login</button>
 
                 <button color="primary"  mat-button>register</button>
             </div>
-    </div>  
+            <p>
+                Form status : {{loginFormBuilder.status}}
+            </p>
+    </div> 
+    
 </form>
